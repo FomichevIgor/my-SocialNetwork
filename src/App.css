@@ -7,17 +7,17 @@
   grid-template-rows: 70px 1fr;
   grid-template-columns: 200px 1fr;
 
-}a{
-  text-decoration: none;
 }
-li{
-  
-  list-style-type: none;
+
+.active{
+  color: rgb(184, 202, 16);
 }
 
 
-
-
+.App-wrapper-content {
+  grid-area: c;
+  border: 1px solid black;
+}
 
 
 
