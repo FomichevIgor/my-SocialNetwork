@@ -9,7 +9,8 @@ import News from './Components/News/News';
 import Music from './Components/Music/Music';
 import Settings from './Components/Settings/Settings'
 
-function App() {
+function App(props) {
+ 
   return (
     <div className="App-wrapper ">
 
@@ -17,12 +18,12 @@ function App() {
       <Nav />
       <div className='App-wrapper-content'>
         <Routes>
-          <Route path='/Profile' element={<Profile />} />
-          <Route path='/Dialogs' element={<Dialogs />} />
+          <Route path='/Profile' element={<Profile state={props.state.profilePage}/>} />
+          <Route path='/Dialogs' element={<Dialogs state={props.state.dialogPage} />} />
           <Route path='/News' element={<News />} />
           <Route path='/Music' element={<Music />} />
           <Route path='/Settings' element={<Settings />} />
-
+         
 
 
         </Routes>

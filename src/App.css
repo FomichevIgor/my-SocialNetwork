@@ -17,22 +17,9 @@
 .App-wrapper-content {
   grid-area: c;
   border: 1px solid black;
+  
 }
 
 
 
-.App-wrapper :nth-child(1) {
 
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.App-wrapper :nth-child(2) {
-  grid-column-start: 1;
-  grid-column-end: 1;
-}
-
-.App-wrapper :nth-child(3) {
-  grid-column-start: 2;
-  grid-column-end: 2;
-}

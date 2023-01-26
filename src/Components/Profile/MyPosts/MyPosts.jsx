@@ -1,18 +1,29 @@
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-function MyPosts() {
+function MyPosts(props) {
+
+    
+    
+    let postsElements=props.state.postsData.map(post=>{
+        return  <Post message={post.message} like={post.likeCount} />})
     return (<>
+    
         My post
         <div>
-            <textarea >
+            <div>
+                <textarea >
 
             </textarea>
-            <button>Add</button>
+            </div>
+            <div>
+                <button>Add</button>
+            </div>
+            
         </div>
         <div className={classes.content}>
-            <Post message="hello" like='15' />
-            <Post message="React" like='20' />
+           {postsElements}
+           
         </div>
 
     </>
