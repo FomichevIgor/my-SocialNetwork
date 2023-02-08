@@ -9,7 +9,11 @@ function Profile(props) {
         <div className={classes.content}>
             <ProfileInfo />
           
-            <MyPosts state={props.state} addPost={props.addPost}/>
+            <MyPosts 
+            state={props.state} 
+            dispatch={props.dispatch}
+           
+            />
 
             <div></div>
         </div>
