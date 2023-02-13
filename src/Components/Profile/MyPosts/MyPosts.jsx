@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import { addPostActionCreater, updatePostTextActionCreater } from "../../../Redux/State";
+import { addPostActionCreater, updatePostTextActionCreater } from "../../../Redux/prifile-reducer";
 function MyPosts(props) {
-
+   
 
 
     let postsElements = props.state.postsData.map(post => {
@@ -12,8 +12,8 @@ function MyPosts(props) {
     let newPostElemnt = React.createRef();
     let addPost = () => {
 
-        let text = newPostElemnt.current.value;
-        //props.addPost(text);
+        
+       
         props.dispatch(addPostActionCreater());
 
        
@@ -22,7 +22,7 @@ function MyPosts(props) {
 
     let onPostChange = () => {
         let text = newPostElemnt.current.value;
-        //props.updatePostText(text);
+       
         props.dispatch(updatePostTextActionCreater(text));
     }
 

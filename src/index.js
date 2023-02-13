@@ -1,6 +1,5 @@
 import './index.css';
-import store from './Redux/State';
-
+import store from './Redux/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -21,6 +20,7 @@ let rerenderTree = (state) => {
 
                     state={store.getState()}
                     dispatch={store.dispatch.bind(store)}
+                    
                    
 
                 />
@@ -30,6 +30,9 @@ let rerenderTree = (state) => {
 }
 
 rerenderTree(store.getState());
-store.subscribe(rerenderTree);
+store.subscribe(()=>{
+    let state=
+    rerenderTree(store.getState());
+});
 
 

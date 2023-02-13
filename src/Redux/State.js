@@ -1,9 +1,5 @@
-const ADD_POST='ADD-POST';
-const UPDATE_POST_TEXT="UPDATE-POST-TEXT";
-const  ADD_MESSAGE= 'ADD-MESSAGE';
-const UPDATE_MESSAGE_TEXT='UPDATE-MESSAGE-TEXT';
-
-
+import profileReducer from './prifile-reducer'
+import dialogsReducer from './dialogs-reducer';
 
 let store = {
     _state: {
@@ -35,55 +31,19 @@ let store = {
     getState() {
         return this._state;
     },
-
+    
     _rerenderTree() {
         console.log('yes');
     },
+
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
-            let newMes = {
-                id: 5,
-                message: this._state.profilePage.newPostText,
-                likeCount: 0,
-            };
-            this._state.profilePage.postsData.push(newMes);
-            this._rerenderTree(this._state);
-            this._state.profilePage.newPostText = '';
-
-
-        } else if (action.type === "UPDATE-POST-TEXT") {
-            this._state.profilePage.newPostText = action.text;
-            this._rerenderTree(this._state);
-        } else if (action.type === 'ADD-MESSAGE') {
-            let newMes = {
-                id: 5,
-                massege: this._state.dialogPage.newMessageText,
-            }
-            this._state.dialogPage.messagesData.push(newMes);
-            this._rerenderTree(this._state);
-            this._state.dialogPage.newMessageText = "";
-        } else if (action.type === 'UPDATE-MESSAGE-TEXT') {
-            this._state.dialogPage.newMessageText = action.text;
-            this._rerenderTree(this._state);
-
-        }
+        this._state.profilePage=profileReducer(this._state.profilePage,action);
+        this._state.dialogPage=dialogsReducer(this._state.dialogPage,action);
+        this._rerenderTree(this._state);   
     },
-
-   
-
-
     subscribe(observer) {
         this._rerenderTree = observer;
 
     }
-
 }
-
-export const addPostActionCreater=()=>({type:ADD_POST});
-export const updatePostTextActionCreater=(text)=>({type:UPDATE_POST_TEXT,text:text});
-export const addMessageActionCreater=()=>({type:ADD_MESSAGE});
-export const updateMessageTextActionCreater=(text)=>({type:UPDATE_MESSAGE_TEXT,text:text});
-
-
-
 export default store;

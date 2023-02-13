@@ -10,7 +10,7 @@ import Music from './Components/Music/Music';
 import Settings from './Components/Settings/Settings'
 
 function App(props) {
- 
+
   return (
     <div className="App-wrapper ">
 
