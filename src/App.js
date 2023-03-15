@@ -1,13 +1,15 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Dialogs from './Components/Dialogs/Dialogs';
 import Header from './Components/Header/Header';
 import Nav from './Components/Nav/Nav';
 import Profile from './Components/Profile/Profile';
 import News from './Components/News/News';
 import Music from './Components/Music/Music';
-import Settings from './Components/Settings/Settings'
+import Settings from './Components/Settings/Settings';
+import DialogsConteiner from'./Components/Dialogs/DialogsConteiner';
+import UsersConteiner from './Components/Users/UsersConteiner';
+
 
 function App(props) {
 
@@ -19,29 +21,15 @@ function App(props) {
       <div className='App-wrapper-content'>
         <Routes>
           
-          
-          <Route index path='/Profile' element={<Profile 
-          state={props.state.profilePage}
-          dispatch={props.dispatch}
-         
-        
-          />} />
-          <Route path='/Dialogs' element={<Dialogs 
-          state={props.state.dialogPage} 
-          dispatch={props.dispatch}
-          
-          />} />
+          <Route index path='/Profile' element={<Profile />} />
+          <Route path='/Dialogs' element={<DialogsConteiner />} />
           <Route path='/News' element={<News />} />
           <Route path='/Music' element={<Music />} />
           <Route path='/Settings' element={<Settings />} />
+          <Route path='/Users' element={<div><UsersConteiner/></div>} />
          
-
-
         </Routes>
       </div>
-
-
-
 
     </div>
   );

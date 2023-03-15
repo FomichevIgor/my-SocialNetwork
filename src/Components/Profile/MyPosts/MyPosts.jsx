@@ -1,31 +1,21 @@
 import React from "react";
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import { addPostActionCreater, updatePostTextActionCreater } from "../../../Redux/prifile-reducer";
+
 function MyPosts(props) {
-   
 
-
-    let postsElements = props.state.postsData.map(post => {
-        return <Post message={post.message} like={post.likeCount} />
+    let postsElements = props.posts.map((post,index) => {
+        return <Post key={index} message={post.message} like={post.likeCount} />
     })
     let newPostElemnt = React.createRef();
     let addPost = () => {
-
-        
-       
-        props.dispatch(addPostActionCreater());
-
-       
+        props.addPost();
     }
-
 
     let onPostChange = () => {
         let text = newPostElemnt.current.value;
-       
-        props.dispatch(updatePostTextActionCreater(text));
+        props.onPostChange(text);
     }
-
 
     return (<>
 
@@ -35,7 +25,7 @@ function MyPosts(props) {
                 <textarea
                     onChange={onPostChange}
                     ref={newPostElemnt}
-                    value={props.state.newPostText}>
+                    value={props.newPostText}>
 
                 </textarea>
             </div>

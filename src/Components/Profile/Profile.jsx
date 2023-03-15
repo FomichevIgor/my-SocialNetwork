@@ -1,19 +1,17 @@
 import classes from "./Profile.module.css";
-import MyPosts from "./MyPosts/MyPosts";
+
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import MyPostsConteiner from "./MyPosts/MyPostsConteiner";
 
 function Profile(props) {
+    
     
 
     return (
         <div className={classes.content}>
             <ProfileInfo />
-          
-            <MyPosts 
-            state={props.state} 
-            dispatch={props.dispatch}
+          <MyPostsConteiner />
            
-            />
 
             <div></div>
         </div>
