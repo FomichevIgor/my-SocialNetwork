@@ -10,7 +10,6 @@ let initState = {
     newPostText: 'Your message'
 }
 
-
 const profileReducer = (state = initState, action) => {
 
     switch (action.type) {

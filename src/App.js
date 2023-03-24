@@ -9,18 +9,14 @@ import Music from './Components/Music/Music';
 import Settings from './Components/Settings/Settings';
 import DialogsConteiner from'./Components/Dialogs/DialogsConteiner';
 import UsersConteiner from './Components/Users/UsersConteiner';
-
-
 function App(props) {
-
   return (
     <div className="App-wrapper ">
-
       <Header />
       <Nav />
       <div className='App-wrapper-content'>
         <Routes>
-          
+        
           <Route index path='/Profile' element={<Profile />} />
           <Route path='/Dialogs' element={<DialogsConteiner />} />
           <Route path='/News' element={<News />} />

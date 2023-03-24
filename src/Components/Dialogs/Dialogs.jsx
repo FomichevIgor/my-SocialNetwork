@@ -3,11 +3,7 @@ import classes from "./Dialogs.module.css";
 import DialogsItem from "./DialogsItem/DialogsItem";
 import Message from "./Message/Message";
 
-
-
-function Dialogs(props) {
-   
-
+function Dialogs(props) { 
     let dialogsElements = props.state.dialogData.map((dialog,index) => {
         return <DialogsItem key={index} name={dialog.name} id={dialog.id} />
     });
@@ -26,32 +22,25 @@ function Dialogs(props) {
         
 
    }
-   
     return (
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
-
                 {dialogsElements}
-
-
             </div>
             <div className={classes.messages}>
                 {messageElements}
-
             </div>
 <div>
           <textarea 
           onChange={updateMessageTexts} 
           ref={newMessageElemnt} 
           value={props.state.newMessageText}>
-
           </textarea>
       </div>
       <div>
           <button  onClick={addMessages}>Add</button>
       </div>
-        </div>
-          
+        </div>    
     )
 }
 export default Dialogs;

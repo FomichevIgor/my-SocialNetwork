@@ -3,7 +3,6 @@ import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
 function MyPosts(props) {
-
     let postsElements = props.posts.map((post,index) => {
         return <Post key={index} message={post.message} like={post.likeCount} />
     })
@@ -16,9 +15,7 @@ function MyPosts(props) {
         let text = newPostElemnt.current.value;
         props.onPostChange(text);
     }
-
     return (<>
-
         My post
         <div>
             <div>
@@ -26,23 +23,16 @@ function MyPosts(props) {
                     onChange={onPostChange}
                     ref={newPostElemnt}
                     value={props.newPostText}>
-
                 </textarea>
             </div>
             <div>
                 <button onClick={addPost}>Add</button>
             </div>
-
         </div>
         <div className={classes.content}>
             {postsElements}
-
         </div>
-
     </>
-
-
-
     )
 }
 export default MyPosts;
