@@ -1,7 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header/Header';
+
 import Nav from './Components/Nav/Nav';
 import News from './Components/News/News';
 import Music from './Components/Music/Music';
@@ -10,6 +10,7 @@ import DialogsConteiner from'./Components/Dialogs/DialogsConteiner';
 import UsersConteiner from './Components/Users/UsersConteiner';
 import ProfileContainer from './Components/Profile/ProfileContainer';
 import HeaderContainer from './Components/Header/HeaderContainer';
+import Login from './Components/Login/Login';
 function App(props) {
   return (
     <div className="App-wrapper ">
@@ -26,6 +27,7 @@ function App(props) {
           <Route path='/Music' element={<Music />} />
           <Route path='/Settings' element={<Settings />} />
           <Route path='/Users' element={<div><UsersConteiner/></div>} />
+          <Route path='/login' element={<div><Login/></div>} />
          
         </Routes>
       </div>

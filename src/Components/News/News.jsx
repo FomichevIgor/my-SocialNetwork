@@ -3,7 +3,7 @@ import classes from "./News.module.css";
 
 function News() {
     return (<>
-        <div>News</div>
+        <div className={classes.wrap}>News</div>
 
     </>
 
