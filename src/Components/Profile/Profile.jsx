@@ -4,14 +4,14 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsConteiner from "./MyPosts/MyPostsConteiner";
 
 function Profile(props) {
-    
-      
-    
+
+
+
     return (
         <div className={classes.content}>
-            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus}/>
-          <MyPostsConteiner />
-           
+            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus} />
+            <MyPostsConteiner />
+
 
             <div></div>
         </div>

@@ -27,7 +27,7 @@ function App(props) {
           <Route path='/Music' element={<Music />} />
           <Route path='/Settings' element={<Settings />} />
           <Route path='/Users' element={<div><UsersConteiner/></div>} />
-          <Route path='/login' element={<div><Login/></div>} />
+          <Route path='/Login' element={<Login/>} />
          
         </Routes>
       </div>

@@ -1,5 +1,5 @@
 import MyPosts from "./MyPosts";
-import { addPostActionCreater, updatePostTextActionCreater } from "../../../Redux/prifile-reducer";
+import { addPostActionCreater } from "../../../Redux/prifile-reducer";
 import { connect } from "react-redux";
 /*function MyPostsConteiner(props) {
 
@@ -33,17 +33,18 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        addPost: () => {
-            dispatch(addPostActionCreater());
+        addPost: (newPostText) => {
+            dispatch(addPostActionCreater(newPostText));
         },
-        onPostChange: (text) => {
+        /*  onPostChange: (text) => {
             let action = updatePostTextActionCreater(text);
             dispatch(action);
-        }
+        }*/
+
     }
 
 }
 
 
-const MyPostsConteiner = connect(mapStateToProps,mapDispatchToProps)(MyPosts);
+const MyPostsConteiner = connect(mapStateToProps, mapDispatchToProps)(MyPosts);
 export default MyPostsConteiner;
