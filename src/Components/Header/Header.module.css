@@ -5,4 +5,10 @@
   }
   div .login {
     float: right;
+
+  }
+  .logo{
+    height: 55px;
+    padding: 7px;
+    margin-left: 22;
   }

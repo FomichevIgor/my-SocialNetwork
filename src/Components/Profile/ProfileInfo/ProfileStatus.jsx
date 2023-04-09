@@ -36,7 +36,7 @@ componentDidUpdate(prevProps,prevState){
         })
        
     }
-    console.log("componentDidUpdate");
+   
 }
     render() {
         

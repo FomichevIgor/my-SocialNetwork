@@ -31,7 +31,7 @@ const TakeParams = (props) => {
     return <ProfileContainer {...props} param={useParams()} />
 }
 
-let AuthNavigateComponent=withAuthNavigate(TakeParams);
+//let AuthNavigateComponent=withAuthNavigate(TakeParams);
 
 let mapStateToProps=(state)=>({
     profile:state.profilePage.profile,
@@ -42,4 +42,4 @@ let mapStateToProps=(state)=>({
 
 
 
-export default connect(mapStateToProps,{getUserProfile,getStatus,updateStatus}) (AuthNavigateComponent);
+export default connect(mapStateToProps,{getUserProfile,getStatus,updateStatus}) (TakeParams);

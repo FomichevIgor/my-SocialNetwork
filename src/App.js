@@ -11,6 +11,7 @@ import UsersConteiner from './Components/Users/UsersConteiner';
 import ProfileContainer from './Components/Profile/ProfileContainer';
 import HeaderContainer from './Components/Header/HeaderContainer';
 import Login from './Components/Login/Login';
+import NewsContainer from './Components/News/NewsContainer';
 function App(props) {
   return (
     <div className="App-wrapper ">
@@ -23,7 +24,7 @@ function App(props) {
         
           <Route path='/Profile/:userId' element={<ProfileContainer />} />
           <Route path='/Dialogs' element={<DialogsConteiner />} />
-          <Route path='/News' element={<News />} />
+          <Route path='/News' element={<NewsContainer />} />
           <Route path='/Music' element={<Music />} />
           <Route path='/Settings' element={<Settings />} />
           <Route path='/Users' element={<div><UsersConteiner/></div>} />
