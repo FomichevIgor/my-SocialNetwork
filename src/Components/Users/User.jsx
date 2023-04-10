@@ -7,7 +7,7 @@ import Paginator from "../../common/Paginator/Paginator";
 let User=({user,followingInProgress,unfollow,follow})=>{
    
     //let user=user;
-
+        
     return(
         <div>
         
@@ -16,7 +16,7 @@ let User=({user,followingInProgress,unfollow,follow})=>{
          <div>
           <div>
             <NavLink to={'./../Profile/' + user.id}>
-            <img height={70} src={user.photos.small != null ? user.photos.small : "https://avatars.mds.yandex.net/i?id=18c3830cb6cc6d125ad185628231b0da973a83f8-9181115-images-thumbs&n=13"} alt="foto" />
+            <img height={70} src={user.photos.small != null ? user.photos.small : "https://avatars.mds.yandex.net/i?id=32258f40d0ac0f2098289eb641d9601398a10360-9234089-images-thumbs&n=13"} alt="foto" />
           </NavLink>
           </div>
           <div>
@@ -81,10 +81,7 @@ let User=({user,followingInProgress,unfollow,follow})=>{
               <div>{user.name}</div>
               <div>{user.status}</div>
             </div>
-            <div>
-              <div>{"user.location.country"}</div>
-              <div>{"user.location.city"}</div>
-            </div>
+          
           </div>
         </div>
 

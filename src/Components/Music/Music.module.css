@@ -1,4 +1,36 @@
-.content {
-    grid-area: c;
-    
-  }
+
+.title{
+  text-align: center;
+}
+.flexContainer {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+  
+	width: 100%;
+}
+.textcolsItem {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+	height: 30%;
+	padding: 20px;
+  justify-content: space-around;
+  text-align: center;
+  
+}
+.name{
+  font-weight:bolder;
+  font-size:120%;
+}
+.album{
+  font-weight:lighter;
+  font-size:larger;
+}
+.urlimg{
+  transition: 1s;
+}
+.urlimg:hover{
+  transform: scale(1.2);
+}

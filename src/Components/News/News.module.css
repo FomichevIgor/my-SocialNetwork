@@ -2,9 +2,11 @@
 .content {
     grid-area: c;
     
+    
   }
   .wrap{
     background: #b1abab;
+    border-radius: 20px;
   }
 
   

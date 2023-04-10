@@ -4,9 +4,10 @@ import styles from './Users.module.css';
 import Paginator from "../../common/Paginator/Paginator";
 import User from "./User";
 import { unfollow } from "../../Redux/users-reducer";
+import Preloader from "../../common/Preloader";
 
 
-let Users=({currentPage,totalUsersCount,pageSize,onPageChanget,users,...props})=>{
+let Users=({currentPage,totalUsersCount,pageSize,onPageChanget,users,isFetching,...props})=>{
    /*
    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
@@ -21,7 +22,8 @@ let Users=({currentPage,totalUsersCount,pageSize,onPageChanget,users,...props})=
         
       <div>
          <Paginator currentPage={currentPage} onPageChanget={onPageChanget} 
-                    totalUsersCount={totalUsersCount} pageSize={pageSize}/>
+                    totalItemsCount={totalUsersCount} pageSize={pageSize}/>
+                    <div> {isFetching? <Preloader/>:''}</div>
         {/* pages.map(p => {
           return <span key={p} className={props.currentPage === p ? styles.selectedPage:''}
             onClick={(e) => { props.onPageChanget(p) }}>{p}</span>

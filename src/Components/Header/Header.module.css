@@ -2,6 +2,7 @@
     background: rgb(218, 214, 214);
     grid-area: h;
     border: 1px solid black;
+    border-radius: 10px;
   }
   div .login {
     float: right;
@@ -11,4 +12,38 @@
     height: 55px;
     padding: 7px;
     margin-left: 22;
+  }
+  .logout{
+    margin-top: 15px;
+    margin-right: 40px;
+  }
+
+  .logoutButton{
+    height: 40px;
+    width: 80px;
+    border-radius: 40px;
+    transition: 1s;
+
+  }
+  .logoutButton:hover{
+    background: rgb(184, 202, 16);
+    transition: 1s;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 255, .2);
+  }
+  .loginName{
+    font-size: larger;
+    padding-right: 20px;
+  }
+  .navLinkButton{
+    height: 40px;
+    width: 80px;
+    border-radius: 40px;
+    transition: 1s;
+   margin-top: 13px;
+    margin-right: 40px;
+  }
+  .navLinkButton:hover{
+    background: rgb(184, 202, 16);
+    transition: 1s;
+    box-shadow: 7px 7px 2px 1px rgba(0, 0, 255, .2);
   }

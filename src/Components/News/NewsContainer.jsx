@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from 'react'
 import News from './News'
 import axios from 'axios'
-import jsonp from 'simple-jsonp-promise';
+
 import { toggleIsFetching,setNews } from '../../Redux/news-reducer';
 import { connect } from 'react-redux';
 

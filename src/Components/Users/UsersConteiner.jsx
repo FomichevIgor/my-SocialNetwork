@@ -40,7 +40,7 @@ class UsersAPI extends React.Component {
   
     render() {
       return(<>
-      <div> {this.props.isFetching? <Preloader/>:''}</div>
+     
      
        <Users 
         totalUsersCount={this.props.totalUsersCount}
@@ -52,6 +52,7 @@ class UsersAPI extends React.Component {
         unfollow={this.props.unfollow}
         followingInProgress={this.props.followingInProgress}
         toggleFollowingProgress={this.props.toggleFollowingProgress}
+        isFetching={this.props.isFetching}
       
       
       />
