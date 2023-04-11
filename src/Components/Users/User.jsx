@@ -10,20 +10,20 @@ let User=({user,followingInProgress,unfollow,follow})=>{
     //let user=user;
         
     return(
-        <div>
+        <div className={classes.textcolsItem}>
         
       
       {
-         <div>
+         <div >
           <div>
             <NavLink to={'./../Profile/' + user.id}>
-            <img  height={70} src={user.photos.small != null ? user.photos.small :userFoto  } alt="Photo" />
+            <img  height={170} src={user.photos.small != null ? user.photos.small :userFoto  } alt="Photo" />
           </NavLink>
           </div>
           <div>
             {
               user.followed
-                ? <button disabled={followingInProgress.some((id)=>id===user.id)} onClick={() => { 
+                ? <button className={classes.button} disabled={followingInProgress.some((id)=>id===user.id)} onClick={() => { 
                   unfollow(user.id);
                  
                   /*axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,{
@@ -49,7 +49,7 @@ let User=({user,followingInProgress,unfollow,follow})=>{
                 }}>Unfollow</button>
 
 
-                : <button disabled={followingInProgress.some(id=>id===user.id)} onClick={() => {
+                : <button className={classes.button} disabled={followingInProgress.some(id=>id===user.id)} onClick={() => {
                   follow(user.id);
                  /*axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${user.id}`,{},{
                     withCredentials:true,
@@ -79,8 +79,8 @@ let User=({user,followingInProgress,unfollow,follow})=>{
           </div>
           <div>
             <div>
-              <div>{user.name}</div>
-              <div>{user.status}</div>
+              <div className={classes.name}>{user.name}</div>
+              <div className={classes.status}>{user.status}</div>
             </div>
           
           </div>

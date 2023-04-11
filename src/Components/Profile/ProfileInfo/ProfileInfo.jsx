@@ -8,15 +8,25 @@ function ProfileInfo(props) {
     if(!props.profile){
         return<Preloader/>
     }
+
+    const onMainPhotoSelected=(e)=>{
+            if(e.target.files.length){
+                props.savePhoto(e.target.files[0])
+            }
+    }
+
     return (<div className={classes.wrap}>
        
             <div> 
-                <img src="https://avatars.mds.yandex.net/i?id=7cfba74f3cb75ed85ad2b2a55b9b039436287ce4-6274710-images-thumbs&n=13" alt="Photo" />
+               { /*<img src="https://avatars.mds.yandex.net/i?id=7cfba74f3cb75ed85ad2b2a55b9b039436287ce4-6274710-images-thumbs&n=13" alt="Photo" />*/}
             </div>
 
             <div>
                 
                 <img className={classes.mainPhoto} src={props.profile.photos.large || userFoto} alt="Photo" />
+                {props.isOwner&&<input type="file" name="file" onChange={onMainPhotoSelected}/>}
+
+
                 <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
                 </div>
         </div>

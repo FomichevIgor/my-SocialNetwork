@@ -1,3 +1,86 @@
 .selectedPage{
     font-weight: bold;
 }
+.title{
+    text-align: center;
+  }
+  .mainblock{
+    position: relative;
+   margin: 0;
+   padding: 0;
+   
+  }
+.flexContainer {
+    display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+        margin-top: 50px;
+      width: 100%;
+  }
+  .textcolsItem {
+    margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      flex: 1;
+      height: 30%;
+      padding: 20px;
+      
+    justify-content: space-around;
+    text-align: center;
+    
+    
+  }
+ .paginator{
+    padding-top: 30px;
+    padding-left: 50px;
+    text-align: center;
+    vertical-align: middle;
+     transition: 1s;
+
+ }
+ .buttonpaginat{
+    height: 33px;
+    width: 60px;
+    border: gainsboro;
+    background: gainsboro;
+    transition: 1s;
+ }
+ .buttonpaginat:hover{
+    background: rgb(184, 202, 16);
+    transition: 1s;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 255, .2);
+ }
+ .preloader{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+ }
+ .button{
+    margin-top: 15px;
+    height: 30px;
+    width: 60px;
+    background: gainsboro;
+    border: solid gainsboro 1px;
+    border-radius: 5px;
+    transition: 1s;
+
+  }
+  .button:hover{
+    background: rgb(184, 202, 16);
+    transition: 1s;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 255, .2);
+  }
+  .name{
+    padding: 15px;
+    font-weight:bolder;
+    font-size:120%;
+
+  }
+  .status{
+    font-weight:lighter;
+    font-size:larger;
+  }

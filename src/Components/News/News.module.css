@@ -1,10 +1,13 @@
 * {margin:0; padding:0;}
 .content {
     grid-area: c;
-    
+     position: relative;
+     margin: 0;
+   padding: 0;
     
   }
   .wrap{
+   
     background: #b1abab;
     border-radius: 20px;
   }
@@ -16,11 +19,6 @@
   .imgbox{
      margin-left: 100px;
   }
-  img {
-   
-    
-  }
-  
   .mainBlock{
     margin-top: 50px;
     margin-bottom: 50px;
@@ -34,3 +32,12 @@
     margin-left: 35px;
     margin-bottom: 20px;
   }
+  .preloader{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+ }
+ 

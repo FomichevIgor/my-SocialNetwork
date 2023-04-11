@@ -6,7 +6,7 @@ function News(props) {
     
 
     if (props.isFetching) {
-        return <Preloader />
+        return <div className={classes.preloader}><Preloader /></div> 
     }
     return (<>
         <div className={classes.wrap}>

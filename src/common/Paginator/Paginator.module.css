@@ -1,13 +1,23 @@
 .selectedPage{
     font-weight: bold;
+   
 }
 .paginator {
     margin: 10px;
+   
     
 }
 .pageNumber {
     padding: 2px;
     border: 1px solid grey;
+    margin: 3px;
+    background: gainsboro;
+    transition: 1s;
+    
+    
+}
+.pageNumber:hover{
+    background: gray;
 }
 
 .pageNumber.selectedPage {

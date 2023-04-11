@@ -1,9 +1,9 @@
 import React from 'react'
-import preloader from '../assets/preloader.gif'
+import preloader from '../assets/loading-25.gif'
 
 function Preloader() {
   return (
-    <div> <img src={preloader} alt="preloader" /> </div>
+    <div> <img height={90} src={preloader} alt="preloader" /> </div>
   )
 }
 
