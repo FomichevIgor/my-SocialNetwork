@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import styles from './Users.module.css';
+import classes from './Users.module.css';
 import Paginator from "../../common/Paginator/Paginator";
+import userFoto from '../../assets/img/user.jpg'
 
 
 let User=({user,followingInProgress,unfollow,follow})=>{
@@ -16,7 +17,7 @@ let User=({user,followingInProgress,unfollow,follow})=>{
          <div>
           <div>
             <NavLink to={'./../Profile/' + user.id}>
-            <img height={70} src={user.photos.small != null ? user.photos.small : "https://avatars.mds.yandex.net/i?id=32258f40d0ac0f2098289eb641d9601398a10360-9234089-images-thumbs&n=13"} alt="foto" />
+            <img  height={70} src={user.photos.small != null ? user.photos.small :userFoto  } alt="Photo" />
           </NavLink>
           </div>
           <div>
