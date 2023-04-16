@@ -2,7 +2,7 @@
     background: rgb(218, 214, 214);
     grid-area: h;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius:0px 0px 20px 20px;
   }
   div .login {
     float: right;

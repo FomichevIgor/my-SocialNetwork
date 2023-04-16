@@ -21,7 +21,7 @@ function Music(props) {
            
             <div>
             
-        <img height={200} src={item.urlimg} alt="foto" className={classes.urlimg}/>
+        <img height={150} src={item.urlimg} alt="foto" className={classes.urlimg}/>
            </div>
            <div>
             <span className={classes.name}>

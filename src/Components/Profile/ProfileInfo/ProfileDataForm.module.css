@@ -1,0 +1,16 @@
+.buttonPpofileSave{
+    height: 33px;
+    width: 80px;
+    border: gainsboro;
+    background: gainsboro;
+    transition: 1s;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    
+}
+.buttonPpofileSave:hover{
+    background: rgb(184, 202, 16);
+    transition: 1s;
+    box-shadow: 4px 4px 0 0 rgba(0, 0, 255, .2);
+}

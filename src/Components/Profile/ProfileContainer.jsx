@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { getUserProfile,getStatus,updateStatus,savePhoto } from "../../Redux/prifile-reducer";
+import { getUserProfile,getStatus,updateStatus,savePhoto,saveProfile } from "../../Redux/prifile-reducer";
 import Profile from "./Profile";
 import { useParams } from "react-router-dom";
 import  {withAuthNavigate}  from "../hoc/withAuthNavigate";
@@ -30,7 +30,7 @@ class ProfileContainer extends React.Component {
         */
     }
    componentDidUpdate(prevProps,prevState,snapshot){
-    if(this.props.param.userId!=prevProps.param.userId)
+    if(this.props.param.userId!==prevProps.param.userId)
                 this.refreshProfile();
 
    }
@@ -54,7 +54,7 @@ const TakeParams = (props) => {
     return <ProfileContainer {...props} param={useParams()} />
 }
 
-//let AuthNavigateComponent=withAuthNavigate(TakeParams);
+let AuthNavigateComponent=withAuthNavigate(TakeParams);
 
 let mapStateToProps=(state)=>({
     profile:state.profilePage.profile,
@@ -65,4 +65,4 @@ let mapStateToProps=(state)=>({
 
 
 
-export default connect(mapStateToProps,{getUserProfile,getStatus,updateStatus,savePhoto}) (TakeParams);
+export default connect(mapStateToProps,{getUserProfile,getStatus,updateStatus,savePhoto,saveProfile}) (AuthNavigateComponent);

@@ -1,18 +1,18 @@
 import { Field } from "redux-form";
 import { Textarea } from "../../../../common/FormsControls/FormsControl";
 import { required,maxLengthCreator } from "../../../../utilit/validators/validator";
-
+import classes from './AddpostForm.module.css'
 
 const AddNewPostForm = (props) => {
     let maxLength100=maxLengthCreator(100);
-     return (<form onSubmit={props.handleSubmit}>
+     return (<form className={classes.mainBox} onSubmit={props.handleSubmit}>
  
          <div>
-             <Field name={"newPostText"} component={Textarea} validate={[required,maxLength100]} placeholder={"Post message"}/>
+             <Field className={classes.textArea} name={"newPostText"} component={Textarea} validate={[required,maxLength100]} placeholder={"Post message"}/>
  
          </div>
          <div>
-             <button>Add</button>
+             <button className={classes.buttonForm}>Add</button>
          </div>
  
      </form>

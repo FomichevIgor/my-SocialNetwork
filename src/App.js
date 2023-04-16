@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Nav from './Components/Nav/Nav';
-import News from './Components/News/News';
-import Music from './Components/Music/Music';
-import Settings from './Components/Settings/Settings';
+
+import Welcome from './Components/Welcome.jsx/Welcome';
+
 import DialogsConteiner from'./Components/Dialogs/DialogsConteiner';
 import UsersConteiner from './Components/Users/UsersConteiner';
 import ProfileContainer from './Components/Profile/ProfileContainer';
@@ -20,14 +20,14 @@ function App(props) {
       <Nav />
       <div className='App-wrapper-content'>
         <Routes>
-        <Route path='/' element={<ProfileContainer />} />
+        <Route path='/' element={<Welcome />} />
           <Route path='/Profile' element={<ProfileContainer />} />
         
           <Route path='/Profile/:userId' element={<ProfileContainer />} />
           <Route path='/Dialogs' element={<DialogsConteiner />} />
           <Route path='/News' element={<NewsContainer />} />
           <Route path='/Music' element={<MusicContainer />} />
-          <Route path='/Settings' element={<Settings />} />
+          
           <Route path='/Users' element={<div><UsersConteiner/></div>} />
           <Route path='/Login' element={<Login/>} />
          

@@ -17,7 +17,11 @@
 .App-wrapper-content {
   grid-area: c;
   border: 1px solid black;
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
+  background-image: url('./assets/img/bgwelcom.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  
   
 }
 

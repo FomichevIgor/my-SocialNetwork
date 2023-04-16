@@ -19,7 +19,7 @@ let Users = ({ currentPage, totalUsersCount, pageSize, onPageChanget, users, isF
 
   return (
     <div className={classes.mainblock}>
-
+          <h2 className={classes.title}>Users</h2>
       <div className={classes.paginator}>
         <Paginator currentPage={currentPage} onPageChanget={onPageChanget}
           totalItemsCount={totalUsersCount} pageSize={pageSize} />

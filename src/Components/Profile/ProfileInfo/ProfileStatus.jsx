@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './ProfileInfo.module.css'
 
 class ProfileStatus extends React.Component {
 
@@ -41,13 +42,13 @@ componentDidUpdate(prevProps,prevState){
     render() {
         
         return (<div>{!this.state.editMode &&
-                    <div>
-                        <span onDoubleClick={this.activateEditMode}>{this.props.status || '------'}</span>
+                    <div className={classes.myStatus}>
+                       <b>My Status : </b> <span onDoubleClick={this.activateEditMode}>{this.props.status || '------'}</span>
                     </div>
                 }
                     {this.state.editMode &&
                         <div>
-                            <input type="text" onChange={this.onStatusChenge} autoFocus={true} onBlur={this.deactivateEditMode} value={this.state.status} />
+                            <input className={classes.standartInput} type="text" onChange={this.onStatusChenge} autoFocus={true} onBlur={this.deactivateEditMode} value={this.state.status} />
                         </div>
                     }
                 

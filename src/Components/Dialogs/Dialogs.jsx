@@ -31,8 +31,11 @@ function Dialogs(props) {
         props.addMessages(values.newMessageText)
     }
 
-    return (
+    return (<div>
+            <h2 className={classes.title}>Messages</h2>
+   
         <div className={classes.dialogs}>
+            
             <div className={classes.dialogsItems}>
                 {dialogsElements}
             </div>
@@ -43,6 +46,7 @@ function Dialogs(props) {
                 <AddMessageFormRedux onSubmit={AddNewMessage} />
             </div>
         </div>
+         </div>
     )
 }
 /*  <textarea

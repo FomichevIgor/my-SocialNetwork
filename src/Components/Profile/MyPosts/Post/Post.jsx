@@ -1,17 +1,19 @@
 import classes from "./Post.module.css";
+import awatar from '../../../../assets/img/2363495226.jpg'
 
 function Post(props) {
+    
     return(
         <div className={classes.content}> 
-        
-         <img src="https://pixelbox.ru/wp-content/uploads/2021/10/dark-avatar-vk-pixelbox.ru-2.jpg" alt="" />
+        <div className={classes.awa}><img  src={awatar} alt="photo" /></div>
+         
         
         
 
          
          
-          <div>{props.message}</div>
-          <div>like {props.like}</div>
+          <div className={classes.message}>{props.message}</div>
+          <div className={classes.likes}>Like {props.like}</div>
       <div></div>
         </div>
 

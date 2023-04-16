@@ -7,8 +7,8 @@ const SET_STATUS = "SET_STATUS";
 let initState = {
 
     postsData: [
-        { id: '1', message: 'hello', likeCount: '15' },
-        { id: '2', message: 'react', likeCount: '25' },
+        { id: '1', message: 'The meaning of life is always there. He just needs to be found.', likeCount: '15' },
+        { id: '2', message: 'Never hope that someone else will change. Changes should always start with yourself.', likeCount: '25' },
     ],
     // newPostText: 'Your message',
     profile: null,
@@ -98,6 +98,21 @@ export const savePhoto = (file) => (dispatch) => {
             }
 
         });
+
+}
+export const saveProfile = (profile) =>async (dispatch,getState) => {
+     const userId=getState().auth.userId;
+     const response=await profileAPI.saveProfile(profile);
+    
+   
+       
+            
+            if (response.data.resultCode === 0) {
+                dispatch(getUserProfile(userId));
+               // dispatch(savePhotoSuccess(response.data.data.photos));
+            }
+
+        
 
 }
 

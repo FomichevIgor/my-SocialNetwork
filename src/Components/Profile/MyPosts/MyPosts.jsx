@@ -37,8 +37,8 @@ function MyPosts(props) {
             <div>
                 <button onClick={addPost}>Add</button>
             </div> */
-    return (<>
-        My post
+    return (<div className={classes.mainMyPosts}>
+         <h3 className={classes.h3}>My post</h3>
         <div>
             <AddNewPostFormRedux onSubmit={addPost}  />
 
@@ -46,7 +46,9 @@ function MyPosts(props) {
         <div className={classes.content}>
             {postsElements}
         </div>
-    </>
+    </div>
+       
+    
     )
 }
 /*

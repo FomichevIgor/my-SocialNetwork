@@ -1,0 +1,17 @@
+.wrap {
+    grid-area: c;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../../assets/img/bgwelcom.jpg');
+    background-size: 100%;
+    border-radius:20px 20px 0 0 ;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .welcome{
+    margin: auto;
+    font-size: 65px;
+   
+    
+  }

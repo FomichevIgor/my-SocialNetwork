@@ -4,17 +4,21 @@
      position: relative;
      margin: 0;
    padding: 0;
+   margin-left: 10px;
+  
     
   }
   .wrap{
-   
-    background: #b1abab;
-    border-radius: 20px;
+    background-image: url('../../assets/img/v882batch2-kul-13-e.jpg');
+    background-size:cover;
+    border-radius: 20px 20px 0 0;
   }
 
   
   .h2{
-    margin-left: 45px;
+    text-align: center;
+    margin-top: 20px;
+    
   }
   .imgbox{
      margin-left: 100px;
