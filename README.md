@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+
+Проект написан на JavaScript на классовых и функциональных компонентах React с методами жизненного цикла для управления состоянием данных и пользовательским интерфейсом в приложение используется Redux.
+
+## Login 604.igor@mail.ru
+## Password network
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
